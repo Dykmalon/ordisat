@@ -166,7 +166,7 @@
   max-width: 1500px !important;
 }
 
-.css-19kzrtu {
+.MuiContainer-root {
   padding: unset !important;
 }
 
@@ -217,9 +217,15 @@
   justify-content: space-between;
   flex-wrap: nowrap;
   flex-direction: row-reverse;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 33px;
+  padding-right: 33px;
 
+}
+
+.css-10zunq2{
+  width: unset!important;
+  padding-left: 33px;
+  padding-right: 33px;
 }
 
 select {
