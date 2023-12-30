@@ -174,12 +174,20 @@
   padding: unset !important;
 }
 
-.css-heg063-MuiTabs-flexContainer {
+/* .css-heg063-MuiTabs-flexContainer {
   display: flex !important;
   flex-direction: row !important;
-  /* row-gap: 20px; */
+
   column-gap: 20px !important;
-}
+} */
+
+/* .tab-space{
+  display: flex !important;
+  flex-direction: row !important;
+  column-gap: 20px !important;
+
+} */
+
 
 .css-1ujnqem-MuiTabs-root {
   padding-bottom: 1.5em !important;
@@ -201,6 +209,8 @@
   min-width: 100px !important;
   position: relative;
   min-height: 42px !important;
+  margin-left: 10px!important;
+  color: grey!important;
 
 }
 
@@ -231,11 +241,11 @@
   min-height: 42px !important;
 } */
 
-.css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+/* .MuiButtonBase-root-MuiTab-root {
   color: grey !important;
-}
+} */
 
-.css-1aquho2-MuiTabs-indicator {
+.MuiTabs-indicator {
   background: transparent !important;
 
 }

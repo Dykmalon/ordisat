@@ -1251,11 +1251,13 @@ function App() {
         >
           <Box sx={{ width: "100%" }} className="gridbox">
             <Box>
-              <Tabs
+              <Tabs 
+               
                 value={value}
                 onChange={handleChange}
                 aria-label="basic tabs example"
               >
+              
                 <Tab className="sidebtns" label="Listed" {...a11yProps(0)} />
                 <Tab className="sidebtns" label="Orders" {...a11yProps(1)} />
                 <Tab className="sidebtns" label="My Orders" {...a11yProps(2)} />
