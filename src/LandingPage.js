@@ -1256,9 +1256,9 @@ function App() {
                 onChange={handleChange}
                 aria-label="basic tabs example"
               >
-                <Tab label="Listed" {...a11yProps(0)} />
-                <Tab label="Orders" {...a11yProps(1)} />
-                <Tab label="My Orders" {...a11yProps(2)} />
+                <Tab className="sidebtns" label="Listed" {...a11yProps(0)} />
+                <Tab className="sidebtns" label="Orders" {...a11yProps(1)} />
+                <Tab className="sidebtns" label="My Orders" {...a11yProps(2)} />
               </Tabs>
               <CustomDropdown/>
               {/* <div dangerouslySetInnerHTML={{ __html: selectHtml }} /> */}
