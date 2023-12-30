@@ -162,7 +162,11 @@
   align-items: stretch !important;
 }
 
-.css-1oqqzyl-MuiContainer-root {
+/* .css-1oqqzyl-MuiContainer-root {
+  max-width: 1500px !important;
+} */
+
+.mainCotainer{
   max-width: 1500px !important;
 }
 
