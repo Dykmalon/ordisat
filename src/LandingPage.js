@@ -878,7 +878,7 @@ function App() {
   return (
     <div className="App">
       <Toaster />
-      <Container maxWidth="1550px">
+      <Container>
         <Box
           sx={{ display: "flex", width: "100%", justifyContent: "flex-end" }}
         >
