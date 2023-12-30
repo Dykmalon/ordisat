@@ -142,6 +142,12 @@
 
 .MuiPagination-ul button{
   color: white!important;
+
+}
+
+.MuiPagination-ul div{
+  color: white!important;
+
 }
 
 .css-ll0ml8-MuiTypography-root{
@@ -149,7 +155,7 @@
   font-weight: bolder;
 }
 
-.css-wjh20t-MuiPagination-ul li {
+.MuiPagination-ul li {
   border: solid 1px #282828 !important;
   color: white !important;
 }
@@ -158,9 +164,9 @@
   color: white !important;
 } */
 
-.css-wjh20t-MuiPagination-ul li div {
+/* .css-wjh20t-MuiPagination-ul li div {
   color: white !important;
-}
+} */
 
 .css-wjh20t-MuiPagination-ul {
   align-items: stretch !important;
