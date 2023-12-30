@@ -1430,6 +1430,7 @@ function App() {
                   </Table>
                 </TableContainer>
                 <TablePagination
+                className="pagepagi"
                   rowsPerPageOptions={[10, 25, 100]}
                   component="div"
                   count={rows.length}

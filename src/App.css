@@ -140,6 +140,10 @@
   border: solid 1px #282828 !important;
 }
 
+.MuiPagination-ul button{
+  color: white!important;
+}
+
 .css-ll0ml8-MuiTypography-root{
   color: white;
   font-weight: bolder;
@@ -150,9 +154,9 @@
   color: white !important;
 }
 
-.css-wjh20t-MuiPagination-ul li button {
+/* .css-wjh20t-MuiPagination-ul li button {
   color: white !important;
-}
+} */
 
 .css-wjh20t-MuiPagination-ul li div {
   color: white !important;
@@ -189,9 +193,9 @@
 } */
 
 
-.css-1ujnqem-MuiTabs-root {
+/* .css-1ujnqem-MuiTabs-root {
   padding-bottom: 1.5em !important;
-}
+} */
 
 /* .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
   border: solid 1px #282828 !important;
@@ -257,6 +261,8 @@
   flex-direction: row-reverse;
   padding-left: 33px;
   padding-right: 33px;
+  padding-bottom: 1.5em !important;
+  padding-top: 1em!important;
 
 }
 
