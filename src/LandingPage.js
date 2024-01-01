@@ -69,13 +69,6 @@ const Mstyle = {
   display: "flex",
 };
 
-const selectHtml = `
-    <select className='${myStyles.customSelect}'>
-      <option value="option1">ORDI</option>
-      <option value="option2">BTC</option>
-      <option value="option3">ETH</option>
-    </select>
-  `;
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -1263,6 +1256,11 @@ function App() {
                 <Tab className="sidebtns" label="My Orders" {...a11yProps(2)} />
               </Tabs>
               <CustomDropdown/>
+              {/* <label class="switch">
+            <input type="checkbox" id="modeToggle"/>
+            <span class="slider round"></span>
+        </label> */}
+              
               {/* <div dangerouslySetInnerHTML={{ __html: selectHtml }} /> */}
             </Box>
             <CustomTabPanel value={value} index={0}>
@@ -1430,7 +1428,6 @@ function App() {
                   </Table>
                 </TableContainer>
                 <TablePagination
-                className="pagepagi"
                   rowsPerPageOptions={[10, 25, 100]}
                   component="div"
                   count={rows.length}
