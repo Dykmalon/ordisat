@@ -1,6 +1,7 @@
 import logo from "./logo.png";
-import myStyles from "./App.css";
+import "./App.css";
 import { Box } from "@mui/system";
+import { FaSun, FaMoon } from 'react-icons/fa'
 import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -42,6 +43,8 @@ import axios from "axios";
 import { server_url, whitelist } from "./config";
 import { Link } from "react-router-dom";
 import { getAddress, sendBtcTransaction } from "sats-connect";
+
+
 
 
 const style = {
@@ -313,7 +316,21 @@ const rows = [
   ),
 ];
 
+
+
+
+
 function App() {
+
+
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleMode = () => {
+    setIsDarkMode((prevMode) => !prevMode);
+  };
+  //
+
+
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -869,7 +886,8 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className={`App ${isDarkMode ? 'dark' : 'light'}`}
+    >
       <Toaster />
       <Container className="mainCotainer">
         <Box
@@ -883,17 +901,18 @@ function App() {
               alignItems: "flex-start",
             }}
           >
-            <Typography sx={{ fontSize: "25px" }}>LOGO</Typography>
+            <Typography className={`logoapp ${isDarkMode ? 'dark' : 'light'}`} sx={{ fontSize: "25px" }}>LOGO</Typography>      
           </Stack>
+
           {connected &&
-          address ===
+            address ===
             "bc1pzem4hsc4d3pa8yyv5ugp7gjnc5rhmsvrqff6637se5824ata4frspl9py3" ? (
             <Link to="/admin">
               <Button
                 id="basic-button"
                 aria-controls={open ? "basic-menu" : undefined}
                 aria-haspopup="true"
-                className="connect-btn"
+                className={`connect-btn ${isDarkMode ? 'dark' : 'light'}`}
                 sx={{
                   m: isMobile ? "20px" : "48px",
                   mr: "0px",
@@ -903,6 +922,7 @@ function App() {
               >
                 Admin Page
               </Button>
+              
             </Link>
           ) : (
             <></>
@@ -993,6 +1013,7 @@ function App() {
             <MenuItem onClick={DisconnectWallet} sx={{ fontSize: "12px" }}>
               disconnect
             </MenuItem>
+         
           </Menu>
 
           <Modal
@@ -1237,30 +1258,29 @@ function App() {
               </Box>
             )}
           </Modal>
+          <button className="toggle-button" onClick={toggleMode}>
+                {isDarkMode ? <FaSun /> : <FaMoon />}
+         </button>
+
         </Box>
         <header
           className="App-header"
           style={{ marginTop: isMobile ? "30px" : "0px" }}
         >
-          <Box sx={{ width: "100%" }} className="gridbox">
+          <Box sx={{ width: "100%" }} className={`gridbox ${isDarkMode ? 'dark' : 'light'}`}>
             <Box>
-              <Tabs 
-               
+              <Tabs
+
                 value={value}
                 onChange={handleChange}
                 aria-label="basic tabs example"
               >
-              
-                <Tab className="sidebtns" label="Listed" {...a11yProps(0)} />
-                <Tab className="sidebtns" label="Orders" {...a11yProps(1)} />
-                <Tab className="sidebtns" label="My Orders" {...a11yProps(2)} />
+                <Tab className={`sidebtns ${isDarkMode ? 'dark' : 'light'}`} label="Listed" {...a11yProps(0)} />
+                <Tab className={`sidebtns ${isDarkMode ? 'dark' : 'light'}`} label="Orders" {...a11yProps(1)} />
+                <Tab className={`sidebtns ${isDarkMode ? 'dark' : 'light'}`} label="My Orders" {...a11yProps(2)} />
               </Tabs>
-              <CustomDropdown/>
-              {/* <label class="switch">
-            <input type="checkbox" id="modeToggle"/>
-            <span class="slider round"></span>
-        </label> */}
-              
+              <CustomDropdown />
+
               {/* <div dangerouslySetInnerHTML={{ __html: selectHtml }} /> */}
             </Box>
             <CustomTabPanel value={value} index={0}>
@@ -1272,7 +1292,7 @@ function App() {
                   className="gridspace"
                 >
                   {Array.from(Array(15)).map((_, index) => (
-                    <Grid item xs={15} sm={4} md={4} key={index} className="ss">
+                    <Grid item xs={15} sm={4} md={4} key={index} className={`ss ${isDarkMode ? 'dark' : 'light'}`}>
                       <Item className="boxtop">
                         <Stack
                           sx={{
@@ -1295,7 +1315,7 @@ function App() {
                               component="span"
                               sx={{ color: "grey", fontSize: "17px" }}
                             >
-                               sats/ordi
+                              sats/ordi
                             </Box>
                           </Typography>
                           <Box
@@ -1444,6 +1464,53 @@ function App() {
           </Box>
         </header>
       </Container>
+      <style jsx>{`
+        .gridbox {
+          background: ${isDarkMode ? '#161616' : '#ffffff'} !important;
+          color: ${isDarkMode ? 'white' : 'black'} !important;
+        }
+
+        .sidebtns{
+          color: ${isDarkMode ? 'white' : 'black'} !important;
+          background: ${isDarkMode ? '#161616' : '#ffffff'} !important;
+        }
+        
+        .App{
+          background: ${isDarkMode ? '#161616' : '#ffffff'} !important;
+        }
+
+        .ss{
+        background: #1C1C1C !important;
+
+          &:hover {
+            background: ${isDarkMode ? 'linear-gradient(rgb(255 255 255 / 20%) 0%, #00000021 100%)' : 'linear-gradient(rgb(0 0 0) 100%, rgb(0 0 0) 100%)'} !important;
+          }
+        }
+
+        .sidebtns.Mui-selected {
+          color: ${isDarkMode ? 'white' : 'black'} !important;
+        }
+        
+        .toggle-button {
+          background-color: transparent;
+          color: ${isDarkMode ? 'white' : 'black'} !important;
+          border: none;
+          padding: 10px;
+          cursor: pointer;
+          font-size: 18px;
+          padding-left: 20px;
+        }
+
+        .logoapp {
+          color: ${isDarkMode ? 'white' : 'black'} !important;
+        
+        }
+        .connect-btn {
+          background: ${isDarkMode ? 'white' : 'black'} !important;
+          color: ${isDarkMode ? 'black' : 'white'} !important;
+        }
+
+      `}</style>
     </div>
   );
 }

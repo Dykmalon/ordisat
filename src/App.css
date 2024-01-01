@@ -1,18 +1,4 @@
-:root {
-  --background: #161616; /* Default dark mode background color */
-  --text: rgb(228, 228, 228); /* Default dark mode text color */
-}
 
-body {
-  background-color: var(--background);
-  color: var(--text);
-  transition: background-color 0.5s, color 0.5s;
-}
-
-.light-mode {
-  --background: white; /* Light mode background color */
-  --text: black; /* Light mode text color */
-}
 
 .App {
   text-align: center;
@@ -95,7 +81,7 @@ body {
 }
 
 .ss:hover {
-  background:linear-gradient(rgb(255 255 255 / 20%) 0%, #00000021 100%) !important;
+  /* background:linear-gradient(rgb(255 255 255 / 20%) 0%, #00000021 100%) !important; */
   /* box-shadow: 0 0 100px #ffffff, 0 0 20px #ffffff, 0 0 2px #ffffff, 0 0 2px #fff */
 }
 
@@ -200,33 +186,6 @@ body {
   padding: unset !important;
 }
 
-/* .css-heg063-MuiTabs-flexContainer {
-  display: flex !important;
-  flex-direction: row !important;
-
-  column-gap: 20px !important;
-} */
-
-/* .tab-space{
-  display: flex !important;
-  flex-direction: row !important;
-  column-gap: 20px !important;
-
-} */
-
-
-/* .css-1ujnqem-MuiTabs-root {
-  padding-bottom: 1.5em !important;
-} */
-
-/* .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
-  border: solid 1px #282828 !important;
-  border-radius: 5px !important;
-  font-weight: bolder !important;
-  min-width: 100px !important;
-  position: relative;
-  min-height: 42px !important;
-} */
 
 .sidebtns{
   border: solid 1px #282828 !important;
@@ -254,22 +213,7 @@ body {
 
 }
 
-/* .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
-  background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.06) 100%) !important;
-  border-radius: 5px;
-  overflow: hidden;
-  color: white !important;
-  border: solid 1px #282828 !important;
-  
-  font-weight: bolder !important;
-  min-width: 100px !important;
-  position: relative;
-  min-height: 42px !important;
-} */
 
-/* .MuiButtonBase-root-MuiTab-root {
-  color: grey !important;
-} */
 
 .MuiTabs-indicator {
   background: transparent !important;
@@ -369,6 +313,7 @@ select {
 .custom-dropdown {
   position: relative;
   width: 85px;
+  color: black;
 }
 
 .dropdown-header {
@@ -410,6 +355,7 @@ select {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1;
+  color: black;
 }
 
 .dropdown-option {
@@ -468,7 +414,7 @@ select {
   font-size: 0.8rem !important;
   letter-spacing: 0.02857em !important;
   text-transform: uppercase !important;
-  color: orangered;
+  color: orangered!important;
 
 }
 
