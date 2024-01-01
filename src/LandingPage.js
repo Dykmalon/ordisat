@@ -1510,6 +1510,10 @@ function App() {
           color: ${isDarkMode ? 'black' : 'white'} !important;
         }
 
+        .MuiPagination-ul button {
+          color: ${isDarkMode ? 'white' : 'black'} !important;
+        }
+
       `}</style>
     </div>
   );
